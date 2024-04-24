@@ -66,7 +66,7 @@ class NLPApp:
 
     # this is hitting API model
     def __ner(self):
-        para = input('enter the sentences: ')
+        para = input(self, 'enter the sentences: ')
         search_term = input('enter the search term: ')
         client = nlpcloud.Client('finetuned-gpt-neox-20b', '2be48590f743cc9181e20cb9c62cc2979d8646b1', gpu=True,
                                  lang='en'
@@ -75,13 +75,13 @@ class NLPApp:
         print(response)
 
     def __lang_detection(self):
-        para = input('enter the sentences: ')
+        para = input(self, 'enter the sentences: ')
         client = nlpcloud.Client("python-langdetect", "2be48590f743cc9181e20cb9c62cc2979d8646b1", gpu=False)
         response = client.langdetection(para)
         print(response)
 
     def __sentiment_anlys(self):
-        para = input('enter the sentences: ')
+        para = input(self, 'enter the sentences: ')
         client = nlpcloud.Client("distilbert-base-uncased-emotion", "2be48590f743cc9181e20cb9c62cc2979d8646b1", gpu=False)
         response = client.sentiment(para)
         print(response)
