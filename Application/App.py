@@ -19,11 +19,19 @@ class NLPApp:
 
     def __second_menu(self):
         second_input = input("""Hi How would you like to proceed? 
-        1. 
-        2. 
-        3.
-        4. Exit. 
+        1. NER 
+        2. Language Detection
+        3. Sentiment Analysis
+        4. Logout. 
         """)
+        if second_input == '1':
+            self.__ner()
+        elif second_input == '2':
+            self.__lang_detection()
+        elif second_input == '3':
+            self.__sentiment_anlys()
+        else:
+            exit('Logged out')
 
     def __register(self):
         name = input('enter name: ')
@@ -52,6 +60,15 @@ class NLPApp:
 
         else:
             print('Not registered')
+
+    def __ner(self):
+        pass
+
+    def __lang_detection(self):
+        pass
+
+    def __sentiment_anlys(self):
+        pass
 
 
 obj = NLPApp()
