@@ -1,3 +1,6 @@
+import nlpcloud
+
+
 class NLPApp:
     def __init__(self):
         self.__database = {}
@@ -62,7 +65,8 @@ class NLPApp:
             print('Not registered')
 
     def __ner(self):
-        pass
+        para = input('enter the sentences: ')
+        search_term = input('enter the search term: ')
 
     def __lang_detection(self):
         pass
