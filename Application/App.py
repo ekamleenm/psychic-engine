@@ -78,7 +78,10 @@ class NLPApp:
         pass
 
     def __sentiment_anlys(self):
-        pass
+        para = input('enter the sentences: ')
+        client = nlpcloud.Client("distilbert-base-uncased-emotion", "2be48590f743cc9181e20cb9c62cc2979d8646b1", gpu=False)
+        response = client.sentiment(para)
+        print(response)
 
 
 obj = NLPApp()
